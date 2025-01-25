@@ -1,5 +1,15 @@
 # Tiger Game
 
+## README for COMP 129 (January 2025)
+For Comp 55 Resurrection:
+The new addition, for non-programmers, will be a high-score board. This will be a new Main Menu option that will store the top 5 highest scores saved from a player's run. 
+The following is pseudocode for the saveScore() function:
+	THe players last 5 high-scores are saved in a collection
+		If the latest score beats a past saved score the past score is deleted and the new score is added
+			If there is no new highest score, then there are no changes to the score table
+		
+		 
+
 ## About
 This is Java-based game inspired by the classic Chrome Dinosaur Game with implemented multiplayer functionality and power-up features to enhance gameplay dynamics and player engagement. We also elevated the visual appeal and gameplay experience by designing custom characters, obstacles, backgrounds and theme music tailored to present the University of the Pacific.
 
@@ -66,4 +76,7 @@ GeeksforGeeks, 2022. https://www.geeksforgeeks.org/
 
 CS Stanford, 2022. https://cs.stanford.edu/people/eroberts/jtf/javadoc/student/acm/graphics/GImage.html
 *This website gives a breakdown of ACM Graphics, a library which is used consistently throughout the game.*
+
+
+
 
