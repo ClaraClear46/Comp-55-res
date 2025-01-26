@@ -20,7 +20,7 @@ public class MainApplication extends GraphicsApplication implements ActionListen
 	public SinglePlayerModePane singleMenu;
 	public MultiPlayerMode multiMenu;
 	public DeathScreenPane gameOverMenu;
-	public HighscoreTable scoreTable;
+	public HighscoreTable highscorePage;
 	private AudioPlayer audio = AudioPlayer.getInstance();
 	public boolean isTwoPlayers;
 
@@ -34,7 +34,7 @@ public class MainApplication extends GraphicsApplication implements ActionListen
 		// Loads player manual pane
 		manualMenu = new PlayerManualPane(this);
 		//Loads player Highscore Table (2025)
-		scoreTable = new HighscoreTable(this);
+		highscorePage = new HighscoreTable(this);
 		// Loads game over menu
 		gameOverMenu = new DeathScreenPane(this, isTwoPlayers);
 		setupInteractions();		
@@ -53,8 +53,8 @@ public class MainApplication extends GraphicsApplication implements ActionListen
 
 	}
 	
-	public void switchToScoreTable() {
-		switchToScreen(scoreTable);
+	public void switchHighscorePane() {
+		switchToScreen(highscorePage);
 		audio.playSound(MUSIC_FOLDER, "MMenu.mp3");
 
 	}
@@ -83,6 +83,9 @@ public class MainApplication extends GraphicsApplication implements ActionListen
 		// Get where the mouse cursor is when clicked
 		GObject button = getElementAt(e.getX(), e.getY());	
 		
+		//2025 debug for trouble with new GRect Button 4
+		System.out.println("Clicked object: " + clickedObj);
+		
 		if (curScreen == mainMenu) { 
 			mainMenu.clickedAt(button);
 		} 
@@ -94,6 +97,9 @@ public class MainApplication extends GraphicsApplication implements ActionListen
 			audio.pauseSound(MUSIC_FOLDER, "MMenu.mp3");
 			gameOverMenu.clickedAt(button);
 		} 
+		else if (curScreen == highscorePane) {
+			highscorePane.clickedAt(button);
+		}
 	}
 
 	@Override

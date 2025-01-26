@@ -9,6 +9,8 @@ public class StartMenuPane extends GraphicsPane {
 	public static final String MUSIC_FOLDER = "sounds";
     GImage background = new GImage("images/start_menu.png");
     GImage manualPage = new GImage("images/player_manual.png");
+    //having trouble with new button and want to make sure at least the image is existing
+    System.out.println("Highscore table image loaded: " + highscorePage.getWidth() + "x" + highscorePage.getHeight());
     //(2025)
     GImage highscoreTable = new GImage ("images/high_score_table.png");
     // Button 1: Single-player
@@ -48,7 +50,9 @@ public class StartMenuPane extends GraphicsPane {
         }
       //(2025)
         else if(objIn == but4){
-        	program.switchToScoreTable();
+        	//debugging text to make sure that the new 4th button works (2025)
+       	 	System.out.println("Highscore button clicked!");
+        	program.switchHighscorePane();
         }
     }
 
@@ -58,6 +62,10 @@ public class StartMenuPane extends GraphicsPane {
         program.add(but1);
         program.add(but2);
         program.add(but3);
+      //debug 
+        System.out.println("but4 added to the canvas");
+        but4.setFilled(true);
+        but4.setFillColor(java.awt.Color.RED);
         //(2025)
         program.add(but4);
     }
