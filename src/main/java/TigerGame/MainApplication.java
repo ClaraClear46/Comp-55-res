@@ -20,6 +20,7 @@ public class MainApplication extends GraphicsApplication implements ActionListen
 	public SinglePlayerModePane singleMenu;
 	public MultiPlayerMode multiMenu;
 	public DeathScreenPane gameOverMenu;
+	public HighscoreTable scoreTable;
 	private AudioPlayer audio = AudioPlayer.getInstance();
 	public boolean isTwoPlayers;
 
@@ -32,6 +33,8 @@ public class MainApplication extends GraphicsApplication implements ActionListen
 		mainMenu = new StartMenuPane(this);		
 		// Loads player manual pane
 		manualMenu = new PlayerManualPane(this);
+		//Loads player Highscore Table (2025)
+		scoreTable = new HighscoreTable(this);
 		// Loads game over menu
 		gameOverMenu = new DeathScreenPane(this, isTwoPlayers);
 		setupInteractions();		
@@ -46,6 +49,12 @@ public class MainApplication extends GraphicsApplication implements ActionListen
 
 	public void switchToManual() {
 		switchToScreen(manualMenu);
+		audio.playSound(MUSIC_FOLDER, "MMenu.mp3");
+
+	}
+	
+	public void switchToScoreTable() {
+		switchToScreen(scoreTable);
 		audio.playSound(MUSIC_FOLDER, "MMenu.mp3");
 
 	}

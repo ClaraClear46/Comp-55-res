@@ -9,12 +9,16 @@ public class StartMenuPane extends GraphicsPane {
 	public static final String MUSIC_FOLDER = "sounds";
     GImage background = new GImage("images/start_menu.png");
     GImage manualPage = new GImage("images/player_manual.png");
+    //(2025)
+    GImage highscoreTable = new GImage ("images/high_score_table.png");
     // Button 1: Single-player
-    public GRect but1 = new GRect(172,136,255,54);
+    public GRect but1 = new GRect(172,63,255,54);
     // Button 2: Multi-player
-    public GRect but2 = new GRect(172,209,255,54);
+    public GRect but2 = new GRect(172,136,255,54);
     // Button 3: Player manual
-    public GRect but3 = new GRect(172,281,255,54);
+    public GRect but3 = new GRect(172,209,255,54);
+    //Button 4: High-Score Table (2025)
+    public GRect but4 = new GRect(172,281,255,54);
 
     public StartMenuPane(MainApplication app) {
         super();
@@ -22,6 +26,8 @@ public class StartMenuPane extends GraphicsPane {
         but1.setLineWidth(0);
         but2.setLineWidth(0);
         but3.setLineWidth(0);
+        //(2025)
+        but4.setLineWidth(0);
         
     }
 
@@ -40,6 +46,10 @@ public class StartMenuPane extends GraphicsPane {
     		audio.pauseSound(MUSIC_FOLDER, "MMenu.mp3");
         	program.switchToMultiPlayer();
         }
+      //(2025)
+        else if(objIn == but4){
+        	program.switchToScoreTable();
+        }
     }
 
     @Override
@@ -48,6 +58,8 @@ public class StartMenuPane extends GraphicsPane {
         program.add(but1);
         program.add(but2);
         program.add(but3);
+        //(2025)
+        program.add(but4);
     }
 
     @Override
@@ -56,6 +68,8 @@ public class StartMenuPane extends GraphicsPane {
         program.remove(but1);
         program.remove(but2);
         program.remove(but3);
+        //(2025)
+        program.remove(but4);
     }
 
 }
