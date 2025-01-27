@@ -84,7 +84,7 @@ public class MainApplication extends GraphicsApplication implements ActionListen
 		GObject button = getElementAt(e.getX(), e.getY());	
 		
 		//2025 debug for trouble with new GRect Button 4
-		System.out.println("Clicked object: " + clickedObj);
+		//System.out.println("Clicked object: " + button);
 		
 		if (curScreen == mainMenu) { 
 			mainMenu.clickedAt(button);
@@ -97,8 +97,8 @@ public class MainApplication extends GraphicsApplication implements ActionListen
 			audio.pauseSound(MUSIC_FOLDER, "MMenu.mp3");
 			gameOverMenu.clickedAt(button);
 		} 
-		else if (curScreen == highscorePane) {
-			highscorePane.clickedAt(button);
+		else if (curScreen == highscorePage) {
+			highscorePage.clickedAt(button);
 		}
 	}
 

@@ -19,7 +19,7 @@ public class HighscoreTable extends GraphicsPane {
 
     public void clickedAt(GObject objIn) {
         if (objIn == backButton) {
-            System.out.println("Back button clicked"); // Debugging click
+//            System.out.println("Back button clicked"); // Debugging click
             program.switchToMainMenu();
         }
     }
@@ -29,11 +29,11 @@ public class HighscoreTable extends GraphicsPane {
         program.add(highscorePage);
 
         // Ensure button is visible
-        backButton.setFilled(true); 
-        backButton.setFillColor(java.awt.Color.LIGHT_GRAY);  // Set color
-        program.add(backButton);  // Add button to the screen
-
-        System.out.println("HighscoreTable shown"); // Debugging contents
+//        backButton.setFilled(true); 
+//        backButton.setFillColor(java.awt.Color.LIGHT_GRAY);  // Set color
+//        program.add(backButton);  // Add button to the screen
+//
+//        System.out.println("HighscoreTable shown"); // Debugging contents
     }
 
     @Override
