@@ -43,6 +43,12 @@ public class DeathScreenPane extends GraphicsPane {
             program.setSize(MainApplication.WINDOW_WIDTH, MainApplication.WINDOW_HEIGHT);
         } 
     }
+    
+    //this is the code I have for saveScore in Player, however I am honeslty unsure on how 
+//    public void saveScore(HighscoreTable highscoreTable) {
+//	    // Pass the player's score to the highscore table to save
+//	    highscoreTable.saveScore(this);
+//	}
 
     @Override
     public void showContents() {
