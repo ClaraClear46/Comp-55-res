@@ -7,7 +7,13 @@ The following is pseudocode for the saveScore() function:
 	THe players last 5 high-scores are saved in a collection
 		If the latest score beats a past saved score the past score is deleted and the new score is added
 			If there is no new highest score, then there are no changes to the score table
-		
+continued COMP 129 README:
+	I did not get the highscore system implemented as I wanted it to be. I was able to work on making a new button and new pane but then ran into some IDE/repository issues/I loaded it with Smart Git when I needed to do a Gradle. That issue was resolved today, 01/27 the due date. 
+	To access the new feature:
+ 		Open the MainApplication 
+		Press the fourth button, labeled Highscores
+  			This will send you to the, not working, Highscore Pane and Table
+			Pressing the back button will take you back to the Main Menu Pane. 
 		 
 
 ## About
